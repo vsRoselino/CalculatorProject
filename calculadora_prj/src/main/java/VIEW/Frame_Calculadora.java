@@ -3,13 +3,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package VIEW;
+import CONTROL.Memory;
+import CONTROL.Calculadora;
 
-/**
- *
- * @author Roselino_PC
- */
 public class Frame_Calculadora extends javax.swing.JFrame {
 
+    //Instância de Memory
+    Memory my = new Memory();
+    
+    //Instância de Calculadora
+    Calculadora cal = new Calculadora();
+    
     public Frame_Calculadora() {
         //COMPONENTES DO FRAME
         initComponents();
@@ -130,6 +134,12 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         Botao_MemoryMais.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Botao_MemoryMaisActionPerformed(evt);
+            }
+        });
+        
+        Botao_Igual.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botao_IgualActionPerformed(evt);
             }
         });
         
@@ -449,6 +459,11 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         Campo_TextoSecundario.setBackground(new java.awt.Color(15, 15, 15));
         Campo_TextoSecundario.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Campo_TextoSecundario.setEnabled(false);
+        Campo_TextoSecundario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Campo_TextoSecundarioActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout Painel_VisorLayout = new javax.swing.GroupLayout(Painel_Visor);
         Painel_Visor.setLayout(Painel_VisorLayout);
@@ -508,78 +523,160 @@ public class Frame_Calculadora extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     //EVENTO DOS BOTÕES DE NÚMEROS E BOTÃO APAGAR
-    private void Botao_0ActionPerformed(java.awt.event.ActionEvent evt) {                                        
-        Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "0");         
+    private void Botao_0ActionPerformed(java.awt.event.ActionEvent evt) {
+        
+        //caso o campo esteja com Syntax Error, limpa e add o número
+        if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
+            Campo_TextoPrincipal.setText("" + "0");
+        }else{
+            Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "0");          
+        }       
     }  
         
-    private void Botao_9ActionPerformed(java.awt.event.ActionEvent evt) {                                        
-        Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "9");         
+    private void Botao_9ActionPerformed(java.awt.event.ActionEvent evt) { 
+        if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
+            Campo_TextoPrincipal.setText("" + "9");
+        }else{
+            Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "9");         
+        }
     }  
     
     private void Botao_8ActionPerformed(java.awt.event.ActionEvent evt) {                                        
-        Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "8");         
+        if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
+            Campo_TextoPrincipal.setText("" + "8");
+        }else{
+            Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "8");
+        }
     }  
     
-    private void Botao_7ActionPerformed(java.awt.event.ActionEvent evt) {                                        
+    private void Botao_7ActionPerformed(java.awt.event.ActionEvent evt) {   
+        if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
+            Campo_TextoPrincipal.setText("" + "7");
+        }else{
         Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "7");         
+        }
     }  
     
     private void Botao_6ActionPerformed(java.awt.event.ActionEvent evt) {                                        
-        Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "6");         
+        if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
+            Campo_TextoPrincipal.setText("" + "6");
+        }else{
+            Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "6");         
+        }
     }    
     
-    private void Botao_5ActionPerformed(java.awt.event.ActionEvent evt) {                                        
-        Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "5");         
+    private void Botao_5ActionPerformed(java.awt.event.ActionEvent evt) { 
+        if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
+            Campo_TextoPrincipal.setText("" + "5");
+        }else{
+            Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "5");         
+        }
     }
     
     private void Botao_4ActionPerformed(java.awt.event.ActionEvent evt) {                                        
-        Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "4");         
+        if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
+            Campo_TextoPrincipal.setText("" + "4");
+        }else{
+            Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "4");         
+        }
     }
 
     private void Botao_3ActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
+            Campo_TextoPrincipal.setText("" + "3");
+        }else{
         Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "3");         
+        }
     }  
     
     private void Botao_2ActionPerformed(java.awt.event.ActionEvent evt) {                                        
-        Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "2");         
+        if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
+            Campo_TextoPrincipal.setText("" + "2");
+        }else{
+            Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "2");   
+        }
     }  
     
     private void Botao_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_1ActionPerformed
-        Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "1");             
+        if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
+            Campo_TextoPrincipal.setText("" + "1");
+        }else{
+            Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "1");             
+        }
     }//GEN-LAST:event_Botao_1ActionPerformed
 
     private void Botao_ApagarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_ApagarActionPerformed
-        int quantidade_caracteres = Campo_TextoPrincipal.getText().length();
-        String novo_texto = Campo_TextoPrincipal.getText().substring(0, quantidade_caracteres - 1);
-        
-        Campo_TextoPrincipal.setText(novo_texto);
+        if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
+            
+        }else{
+            int quantidade_caracteres = Campo_TextoPrincipal.getText().length();
+            String novo_texto = Campo_TextoPrincipal.getText().substring(0, quantidade_caracteres - 1);
+
+            Campo_TextoPrincipal.setText(novo_texto);         
+        }
+    
     }//GEN-LAST:event_Botao_ApagarActionPerformed
+
+    private void Campo_TextoSecundarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Campo_TextoSecundarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Campo_TextoSecundarioActionPerformed
 
     
     //EVENTO DOS BOTÕES DE OPERAÇÕES
+    
+    //Variável operacao é um validador
+    //Com base na operação desejada, ela validará o evento do Botao_Igual
+    String operacao;
+            
     private void Botao_SomaActionPerformed(java.awt.event.ActionEvent evt) {                                             
+        cal.set_valor(Campo_TextoPrincipal.getText());
+        Campo_TextoPrincipal.setText("");
         
+        operacao = "+";
+        
+        //VISOR SECUNDARIO
+        Campo_TextoSecundario.setText(cal.get_valor() + " " + operacao);
     } 
 
     private void Botao_SubtracaoActionPerformed(java.awt.event.ActionEvent evt) {                                             
+        cal.set_valor(Campo_TextoPrincipal.getText());
+        Campo_TextoPrincipal.setText("");
         
+        operacao = "-";
+        
+        //VISOR SECUNDARIO
+        Campo_TextoSecundario.setText(cal.get_valor() + " " + operacao);
     }  
 
     private void Botao_DivisaoActionPerformed(java.awt.event.ActionEvent evt) {                                             
+        cal.set_valor(Campo_TextoPrincipal.getText());
+        Campo_TextoPrincipal.setText("");
         
+        operacao = "/";
+        
+        //VISOR SECUNDARIO
+        Campo_TextoSecundario.setText(cal.get_valor() + " " + operacao);
     }  
 
     private void Botao_MultiplicacaoActionPerformed(java.awt.event.ActionEvent evt) {                                             
+        cal.set_valor(Campo_TextoPrincipal.getText());
+        Campo_TextoPrincipal.setText("");
         
+        operacao = "*";
+        
+        //VISOR SECUNDARIO
+        Campo_TextoSecundario.setText(cal.get_valor() + " " + operacao);
     }  
 
     private void Botao_RaizActionPerformed(java.awt.event.ActionEvent evt) {                                             
         
+        operacao = "|";
     }  
 
     private void Botao_PotenciaActionPerformed(java.awt.event.ActionEvent evt) {                                             
         
-    }      
+        operacao = "^";
+    }       
     
     
     //EVENTO DOS BOTÕES DE MEMORY
@@ -595,6 +692,60 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         
     }   
     
+    
+    //EVENTO BOTÃO IGUAL
+    private void Botao_IgualActionPerformed(java.awt.event.ActionEvent evt) {                                             
+
+        switch(operacao){
+            case "+":
+                String soma;
+                
+                soma = cal.soma(Campo_TextoPrincipal.getText());
+                Campo_TextoPrincipal.setText(soma);
+                
+                //VISOR SECUNDARIO
+                Campo_TextoSecundario.setText("");
+                
+                break;
+            case "-":
+                String subtracao;
+                
+                subtracao = cal.subtracao(Campo_TextoPrincipal.getText());
+                Campo_TextoPrincipal.setText(subtracao);
+
+                //VISOR SECUNDARIO
+                Campo_TextoSecundario.setText("");
+                
+                break;
+            case "*":
+               String multiplicacao;
+                
+                multiplicacao = cal.multiplicacao(Campo_TextoPrincipal.getText());
+                Campo_TextoPrincipal.setText(multiplicacao);
+                
+                //VISOR SECUNDARIO
+                Campo_TextoSecundario.setText("");
+                
+                break;
+            case "/":
+                String divisao;
+                
+                divisao = cal.divisao(Campo_TextoPrincipal.getText());
+                Campo_TextoPrincipal.setText(divisao);             
+                
+                //VISOR SECUNDARIO
+                Campo_TextoSecundario.setText("");
+                
+                break;
+            case "|":
+                
+                break;
+            case "^":
+                
+                break;
+        }
+        
+    }   
 
     
     /**
