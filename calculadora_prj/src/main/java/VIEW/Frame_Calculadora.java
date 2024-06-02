@@ -17,132 +17,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
     public Frame_Calculadora() {
         //COMPONENTES DO FRAME
         initComponents();
-        
-        //DECLARANDO MÉTODOS DOS BOTÕES (EVENTO)
-        //Há alguns botões não vigentes aqui, isso pois já estão declarados
-        //no init gerado pelo próprio JFRAME
-        //estes declarados abaixo não foram gerados por ele
-        //habilitar a edição do cógido gerado pode trazer bugs
-        Botao_0.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Botao_0ActionPerformed(evt);
-            }
-        });
-        
-        Botao_2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Botao_2ActionPerformed(evt);
-            }
-        });
-  
-        Botao_3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Botao_3ActionPerformed(evt);
-            }
-        });
-        
-        Botao_4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Botao_4ActionPerformed(evt);
-            }
-        });
-        
-        Botao_5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Botao_5ActionPerformed(evt);
-            }
-        });
-        
-        Botao_6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Botao_6ActionPerformed(evt);
-            }
-        });
-        
-        Botao_7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Botao_7ActionPerformed(evt);
-            }
-        });
-        
-        Botao_8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Botao_8ActionPerformed(evt);
-            }
-        });
-        
-        Botao_9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Botao_9ActionPerformed(evt);
-            }
-        });
-        
-        Botao_Soma.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Botao_SomaActionPerformed(evt);
-            }
-        });
-        
-        Botao_Subtracao.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Botao_SubtracaoActionPerformed(evt);
-            }
-        });
-        
-        Botao_Multiplicacao.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Botao_MultiplicacaoActionPerformed(evt);
-            }
-        });
-        
-        Botao_Divisao.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Botao_DivisaoActionPerformed(evt);
-            }
-        });
-        
-        Botao_Raiz.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Botao_RaizActionPerformed(evt);
-            }
-        });
-        
-        Botao_Potencia.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Botao_PotenciaActionPerformed(evt);
-            }
-        });
-        
-        Botao_History.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Botao_HistoryActionPerformed(evt);
-            }
-        });
-        
-        Botao_MemoryMenos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Botao_MemoryMenosActionPerformed(evt);
-            }
-        });
-        
-        Botao_MemoryMais.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Botao_MemoryMaisActionPerformed(evt);
-            }
-        });
-        
-        Botao_Igual.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Botao_IgualActionPerformed(evt);
-            }
-        });      
-        
-        Botao_Apagar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Botao_ApagarActionPerformed(evt);
-            }
-        });
-        
+                
     }
     
 
@@ -206,18 +81,33 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         Botao_History.setForeground(new java.awt.Color(200, 200, 200));
         Botao_History.setText("M");
         Botao_History.setPreferredSize(new java.awt.Dimension(85, 30));
+        Botao_History.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botao_HistoryActionPerformed(evt);
+            }
+        });
 
         Botao_MemoryMais.setBackground(new java.awt.Color(15, 15, 15));
         Botao_MemoryMais.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Botao_MemoryMais.setForeground(new java.awt.Color(200, 200, 200));
         Botao_MemoryMais.setText("M+");
         Botao_MemoryMais.setPreferredSize(new java.awt.Dimension(85, 30));
+        Botao_MemoryMais.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botao_MemoryMaisActionPerformed(evt);
+            }
+        });
 
         Botao_MemoryMenos.setBackground(new java.awt.Color(15, 15, 15));
         Botao_MemoryMenos.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Botao_MemoryMenos.setForeground(new java.awt.Color(200, 200, 200));
         Botao_MemoryMenos.setText("M-");
         Botao_MemoryMenos.setPreferredSize(new java.awt.Dimension(85, 30));
+        Botao_MemoryMenos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botao_MemoryMenosActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout Painel_BotoesMemoryLayout = new javax.swing.GroupLayout(Painel_BotoesMemory);
         Painel_BotoesMemory.setLayout(Painel_BotoesMemoryLayout);
@@ -251,6 +141,11 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         Botao_Percentual.setForeground(new java.awt.Color(200, 200, 200));
         Botao_Percentual.setText("%");
         Botao_Percentual.setPreferredSize(new java.awt.Dimension(65, 55));
+        Botao_Percentual.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botao_PercentualActionPerformed(evt);
+            }
+        });
 
         Botao_1.setBackground(new java.awt.Color(15, 15, 15));
         Botao_1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -268,66 +163,121 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         Botao_4.setForeground(new java.awt.Color(200, 200, 200));
         Botao_4.setText("4");
         Botao_4.setPreferredSize(new java.awt.Dimension(65, 55));
+        Botao_4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botao_4ActionPerformed(evt);
+            }
+        });
 
         Botao_7.setBackground(new java.awt.Color(15, 15, 15));
         Botao_7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Botao_7.setForeground(new java.awt.Color(200, 200, 200));
         Botao_7.setText("7");
         Botao_7.setPreferredSize(new java.awt.Dimension(65, 55));
+        Botao_7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botao_7ActionPerformed(evt);
+            }
+        });
 
         Botao_Fracao.setBackground(new java.awt.Color(15, 15, 15));
         Botao_Fracao.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Botao_Fracao.setForeground(new java.awt.Color(200, 200, 200));
         Botao_Fracao.setText("1/x");
         Botao_Fracao.setPreferredSize(new java.awt.Dimension(65, 55));
+        Botao_Fracao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botao_FracaoActionPerformed(evt);
+            }
+        });
 
         Botao_0.setBackground(new java.awt.Color(15, 15, 15));
         Botao_0.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Botao_0.setForeground(new java.awt.Color(200, 200, 200));
         Botao_0.setText("0");
         Botao_0.setPreferredSize(new java.awt.Dimension(65, 55));
+        Botao_0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botao_0ActionPerformed(evt);
+            }
+        });
 
         Botao_2.setBackground(new java.awt.Color(15, 15, 15));
         Botao_2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Botao_2.setForeground(new java.awt.Color(200, 200, 200));
         Botao_2.setText("2");
         Botao_2.setPreferredSize(new java.awt.Dimension(65, 55));
+        Botao_2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botao_2ActionPerformed(evt);
+            }
+        });
 
         Botao_5.setBackground(new java.awt.Color(15, 15, 15));
         Botao_5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Botao_5.setForeground(new java.awt.Color(200, 200, 200));
         Botao_5.setText("5");
         Botao_5.setPreferredSize(new java.awt.Dimension(65, 55));
+        Botao_5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botao_5ActionPerformed(evt);
+            }
+        });
 
         Botao_8.setBackground(new java.awt.Color(15, 15, 15));
         Botao_8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Botao_8.setForeground(new java.awt.Color(200, 200, 200));
         Botao_8.setText("8");
         Botao_8.setPreferredSize(new java.awt.Dimension(65, 55));
+        Botao_8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botao_8ActionPerformed(evt);
+            }
+        });
 
         Botao_Raiz.setBackground(new java.awt.Color(15, 15, 15));
         Botao_Raiz.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Botao_Raiz.setForeground(new java.awt.Color(200, 200, 200));
         Botao_Raiz.setText("/x");
         Botao_Raiz.setPreferredSize(new java.awt.Dimension(65, 55));
+        Botao_Raiz.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botao_RaizActionPerformed(evt);
+            }
+        });
 
         Botao_Potencia.setBackground(new java.awt.Color(15, 15, 15));
         Botao_Potencia.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Botao_Potencia.setForeground(new java.awt.Color(200, 200, 200));
         Botao_Potencia.setText("^2");
         Botao_Potencia.setPreferredSize(new java.awt.Dimension(65, 55));
+        Botao_Potencia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botao_PotenciaActionPerformed(evt);
+            }
+        });
 
         Botao_3.setBackground(new java.awt.Color(15, 15, 15));
         Botao_3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Botao_3.setForeground(new java.awt.Color(200, 200, 200));
         Botao_3.setText("3");
         Botao_3.setPreferredSize(new java.awt.Dimension(65, 55));
+        Botao_3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botao_3ActionPerformed(evt);
+            }
+        });
 
         Botao_6.setBackground(new java.awt.Color(15, 15, 15));
         Botao_6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Botao_6.setForeground(new java.awt.Color(200, 200, 200));
         Botao_6.setText("6");
         Botao_6.setPreferredSize(new java.awt.Dimension(65, 55));
+        Botao_6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botao_6ActionPerformed(evt);
+            }
+        });
 
         Botao_Virgula.setBackground(new java.awt.Color(15, 15, 15));
         Botao_Virgula.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -345,36 +295,66 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         Botao_9.setForeground(new java.awt.Color(200, 200, 200));
         Botao_9.setText("9");
         Botao_9.setPreferredSize(new java.awt.Dimension(65, 55));
+        Botao_9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botao_9ActionPerformed(evt);
+            }
+        });
 
         Botao_Divisao.setBackground(new java.awt.Color(15, 15, 15));
         Botao_Divisao.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Botao_Divisao.setForeground(new java.awt.Color(200, 200, 200));
         Botao_Divisao.setText("/");
         Botao_Divisao.setPreferredSize(new java.awt.Dimension(65, 55));
+        Botao_Divisao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botao_DivisaoActionPerformed(evt);
+            }
+        });
 
         Botao_Soma.setBackground(new java.awt.Color(15, 15, 15));
         Botao_Soma.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Botao_Soma.setForeground(new java.awt.Color(200, 200, 200));
         Botao_Soma.setText("+");
         Botao_Soma.setPreferredSize(new java.awt.Dimension(65, 55));
+        Botao_Soma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botao_SomaActionPerformed(evt);
+            }
+        });
 
         Botao_Igual.setBackground(new java.awt.Color(15, 15, 15));
         Botao_Igual.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Botao_Igual.setForeground(new java.awt.Color(200, 200, 200));
         Botao_Igual.setText("=");
         Botao_Igual.setPreferredSize(new java.awt.Dimension(65, 55));
+        Botao_Igual.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botao_IgualActionPerformed(evt);
+            }
+        });
 
         Botao_Subtracao.setBackground(new java.awt.Color(15, 15, 15));
         Botao_Subtracao.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Botao_Subtracao.setForeground(new java.awt.Color(200, 200, 200));
         Botao_Subtracao.setText("-");
         Botao_Subtracao.setPreferredSize(new java.awt.Dimension(65, 55));
+        Botao_Subtracao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botao_SubtracaoActionPerformed(evt);
+            }
+        });
 
         Botao_Multiplicacao.setBackground(new java.awt.Color(15, 15, 15));
         Botao_Multiplicacao.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Botao_Multiplicacao.setForeground(new java.awt.Color(200, 200, 200));
         Botao_Multiplicacao.setText("x");
         Botao_Multiplicacao.setPreferredSize(new java.awt.Dimension(65, 55));
+        Botao_Multiplicacao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botao_MultiplicacaoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout Painel_BotoesCorpoLayout = new javax.swing.GroupLayout(Painel_BotoesCorpo);
         Painel_BotoesCorpo.setLayout(Painel_BotoesCorpoLayout);
@@ -475,6 +455,11 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         Botao_Apagar.setForeground(new java.awt.Color(200, 200, 200));
         Botao_Apagar.setText("<");
         Botao_Apagar.setPreferredSize(new java.awt.Dimension(100, 40));
+        Botao_Apagar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botao_ApagarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout Painel_BotoesFaixaSuperiorLayout = new javax.swing.GroupLayout(Painel_BotoesFaixaSuperior);
         Painel_BotoesFaixaSuperior.setLayout(Painel_BotoesFaixaSuperiorLayout);
@@ -603,81 +588,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     
-    //EVENTO DOS BOTÕES DE NÚMEROS E BOTÃO VIRGULA
-    private void Botao_0ActionPerformed(java.awt.event.ActionEvent evt) {
-        
-        //caso o campo esteja com Syntax Error, limpa e add o número
-        if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
-            Campo_TextoPrincipal.setText("" + "0");
-        }else{
-            Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "0");          
-        }       
-    }  
-        
-    private void Botao_9ActionPerformed(java.awt.event.ActionEvent evt) { 
-        if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
-            Campo_TextoPrincipal.setText("" + "9");
-        }else{
-            Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "9");         
-        }
-    }  
-    
-    private void Botao_8ActionPerformed(java.awt.event.ActionEvent evt) {                                        
-        if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
-            Campo_TextoPrincipal.setText("" + "8");
-        }else{
-            Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "8");
-        }
-    }  
-    
-    private void Botao_7ActionPerformed(java.awt.event.ActionEvent evt) {   
-        if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
-            Campo_TextoPrincipal.setText("" + "7");
-        }else{
-        Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "7");         
-        }
-    }  
-    
-    private void Botao_6ActionPerformed(java.awt.event.ActionEvent evt) {                                        
-        if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
-            Campo_TextoPrincipal.setText("" + "6");
-        }else{
-            Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "6");         
-        }
-    }    
-    
-    private void Botao_5ActionPerformed(java.awt.event.ActionEvent evt) { 
-        if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
-            Campo_TextoPrincipal.setText("" + "5");
-        }else{
-            Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "5");         
-        }
-    }
-    
-    private void Botao_4ActionPerformed(java.awt.event.ActionEvent evt) {                                        
-        if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
-            Campo_TextoPrincipal.setText("" + "4");
-        }else{
-            Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "4");         
-        }
-    }
-
-    private void Botao_3ActionPerformed(java.awt.event.ActionEvent evt) {                                        
-        if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
-            Campo_TextoPrincipal.setText("" + "3");
-        }else{
-        Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "3");         
-        }
-    }  
-    
-    private void Botao_2ActionPerformed(java.awt.event.ActionEvent evt) {                                        
-        if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
-            Campo_TextoPrincipal.setText("" + "2");
-        }else{
-            Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "2");   
-        }
-    }  
-    
+    //EVENTO DOS BOTÕES 1 E BOTÃO VIRGULA  
     private void Botao_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_1ActionPerformed
         if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
             Campo_TextoPrincipal.setText("" + "1");
@@ -701,97 +612,91 @@ public class Frame_Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_Campo_TextoPrincipalActionPerformed
 
     
-    //EVENTO DOS BOTÕES DA FAIXA SUPERIOR
+    //EVENTO DOS BOTÕES CE E BOTÕES NUMÉRICOS
     private void Botao_CEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_CEActionPerformed
         Campo_TextoPrincipal.setText("");
     }//GEN-LAST:event_Botao_CEActionPerformed
 
-    private void Botao_ApagarActionPerformed(java.awt.event.ActionEvent evt){
+    private void Botao_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_0ActionPerformed
         if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
-            
+            Campo_TextoPrincipal.setText("" + "0");
         }else{
-            int quantidade_caracteres = Campo_TextoPrincipal.getText().length();
-            String novo_texto = Campo_TextoPrincipal.getText().substring(0, quantidade_caracteres - 1);
-
-            Campo_TextoPrincipal.setText(novo_texto);         
+            Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "0");             
         }
-        
-    }
+    }//GEN-LAST:event_Botao_0ActionPerformed
+
+    private void Botao_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_2ActionPerformed
+        if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
+            Campo_TextoPrincipal.setText("" + "2");
+        }else{
+            Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "2");             
+        }
+    }//GEN-LAST:event_Botao_2ActionPerformed
+
+    private void Botao_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_3ActionPerformed
+        if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
+            Campo_TextoPrincipal.setText("" + "3");
+        }else{
+            Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "3");             
+        }
+    }//GEN-LAST:event_Botao_3ActionPerformed
+
+    private void Botao_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_4ActionPerformed
+        if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
+            Campo_TextoPrincipal.setText("" + "4");
+        }else{
+            Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "4");             
+        }
+    }//GEN-LAST:event_Botao_4ActionPerformed
+
+    private void Botao_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_5ActionPerformed
+        if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
+            Campo_TextoPrincipal.setText("" + "5");
+        }else{
+            Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "5");             
+        }
+    }//GEN-LAST:event_Botao_5ActionPerformed
+
+    private void Botao_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_6ActionPerformed
+        if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
+            Campo_TextoPrincipal.setText("" + "6");
+        }else{
+            Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "6");             
+        }
+    }//GEN-LAST:event_Botao_6ActionPerformed
+
+    private void Botao_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_7ActionPerformed
+        if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
+            Campo_TextoPrincipal.setText("" + "7");
+        }else{
+            Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "7");             
+        }
+    }//GEN-LAST:event_Botao_7ActionPerformed
+
+    private void Botao_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_8ActionPerformed
+        if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
+            Campo_TextoPrincipal.setText("" + "8");
+        }else{
+            Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "8");             
+        }
+    }//GEN-LAST:event_Botao_8ActionPerformed
+
+    private void Botao_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_9ActionPerformed
+        if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
+            Campo_TextoPrincipal.setText("" + "9");
+        }else{
+            Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "9");             
+        }
+    }//GEN-LAST:event_Botao_9ActionPerformed
+
     
-    //EVENTO DOS BOTÕES DE OPERAÇÕES
+    //EVENTO DOS BOTÕES DE OPERAÇÕES BÁSICAS
     
     //Variável operacao é um validador
     //Com base na operação desejada, ela validará o evento do Botao_Igual
     String operacao;
-            
-    private void Botao_SomaActionPerformed(java.awt.event.ActionEvent evt) {                                             
-        cal.set_valor(Campo_TextoPrincipal.getText());
-        Campo_TextoPrincipal.setText("");
-        
-        operacao = "+";
-        
-        //VISOR SECUNDARIO
-        Campo_TextoSecundario.setText(cal.get_valor() + " " + operacao);
-    } 
-
-    private void Botao_SubtracaoActionPerformed(java.awt.event.ActionEvent evt) {                                             
-        cal.set_valor(Campo_TextoPrincipal.getText());
-        Campo_TextoPrincipal.setText("");
-        
-        operacao = "-";
-        
-        //VISOR SECUNDARIO
-        Campo_TextoSecundario.setText(cal.get_valor() + " " + operacao);
-    }  
-
-    private void Botao_DivisaoActionPerformed(java.awt.event.ActionEvent evt) {                                             
-        cal.set_valor(Campo_TextoPrincipal.getText());
-        Campo_TextoPrincipal.setText("");
-        
-        operacao = "/";
-        
-        //VISOR SECUNDARIO
-        Campo_TextoSecundario.setText(cal.get_valor() + " " + operacao);
-    }  
-
-    private void Botao_MultiplicacaoActionPerformed(java.awt.event.ActionEvent evt) {                                             
-        cal.set_valor(Campo_TextoPrincipal.getText());
-        Campo_TextoPrincipal.setText("");
-        
-        operacao = "*";
-        
-        //VISOR SECUNDARIO
-        Campo_TextoSecundario.setText(cal.get_valor() + " " + operacao);
-    }  
-
-    private void Botao_RaizActionPerformed(java.awt.event.ActionEvent evt) {                                             
-        
-        operacao = "|";
-    }  
-
-    private void Botao_PotenciaActionPerformed(java.awt.event.ActionEvent evt) {                                             
-        
-        operacao = "^";
-    }       
     
-    
-    //EVENTO DOS BOTÕES DE MEMORY
-    private void Botao_HistoryActionPerformed(java.awt.event.ActionEvent evt) {                                             
-        
-    }   
-    
-    private void Botao_MemoryMenosActionPerformed(java.awt.event.ActionEvent evt) {                                             
-        
-    }   
-    
-    private void Botao_MemoryMaisActionPerformed(java.awt.event.ActionEvent evt) {                                             
-        
-    }   
-    
-    
-    //EVENTO BOTÃO IGUAL
-    private void Botao_IgualActionPerformed(java.awt.event.ActionEvent evt) {                                             
-
+    private void Botao_IgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_IgualActionPerformed
         switch(operacao){
             case "+":
                 String soma;
@@ -840,8 +745,90 @@ public class Frame_Calculadora extends javax.swing.JFrame {
                 
                 break;
         }
+    }//GEN-LAST:event_Botao_IgualActionPerformed
+
+    private void Botao_SomaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_SomaActionPerformed
+        cal.set_valor(Campo_TextoPrincipal.getText());
+        Campo_TextoPrincipal.setText("");
         
-    }   
+        operacao = "+";
+        
+        //VISOR SECUNDARIO
+        Campo_TextoSecundario.setText(cal.get_valor() + " " + operacao);
+    }//GEN-LAST:event_Botao_SomaActionPerformed
+
+    private void Botao_SubtracaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_SubtracaoActionPerformed
+        cal.set_valor(Campo_TextoPrincipal.getText());
+        Campo_TextoPrincipal.setText("");
+        
+        operacao = "-";
+        
+        //VISOR SECUNDARIO
+        Campo_TextoSecundario.setText(cal.get_valor() + " " + operacao);
+    }//GEN-LAST:event_Botao_SubtracaoActionPerformed
+
+    private void Botao_MultiplicacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_MultiplicacaoActionPerformed
+        cal.set_valor(Campo_TextoPrincipal.getText());
+        Campo_TextoPrincipal.setText("");
+        
+        operacao = "*";
+        
+        //VISOR SECUNDARIO
+        Campo_TextoSecundario.setText(cal.get_valor() + " " + operacao);
+    }//GEN-LAST:event_Botao_MultiplicacaoActionPerformed
+
+    private void Botao_DivisaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_DivisaoActionPerformed
+        cal.set_valor(Campo_TextoPrincipal.getText());
+        Campo_TextoPrincipal.setText("");
+        
+        operacao = "/";
+        
+        //VISOR SECUNDARIO
+        Campo_TextoSecundario.setText(cal.get_valor() + " " + operacao);
+    }//GEN-LAST:event_Botao_DivisaoActionPerformed
+
+    
+    //EVENTOS DOS BOTÕES DE OPERAÇÕES ESPECIALIZADAS, BOTÃO APAGAR E PERCENTUAL
+    private void Botao_ApagarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_ApagarActionPerformed
+        if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
+            
+        }else{
+            int quantidade_caracteres = Campo_TextoPrincipal.getText().length();
+            String novo_texto = Campo_TextoPrincipal.getText().substring(0, quantidade_caracteres - 1);
+
+            Campo_TextoPrincipal.setText(novo_texto);         
+        }
+    }//GEN-LAST:event_Botao_ApagarActionPerformed
+
+    private void Botao_FracaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_FracaoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Botao_FracaoActionPerformed
+
+    private void Botao_RaizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_RaizActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Botao_RaizActionPerformed
+
+    private void Botao_PotenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_PotenciaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Botao_PotenciaActionPerformed
+
+    private void Botao_PercentualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_PercentualActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Botao_PercentualActionPerformed
+
+    
+    //EVENTOS BOTÕES DA FAIXA SUPERIOR (MEMORY)
+    private void Botao_HistoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_HistoryActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Botao_HistoryActionPerformed
+
+    private void Botao_MemoryMaisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_MemoryMaisActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Botao_MemoryMaisActionPerformed
+
+    private void Botao_MemoryMenosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_MemoryMenosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Botao_MemoryMenosActionPerformed
 
     
     /**
