@@ -8,22 +8,27 @@ public class Memory {
     //constructor
     
     //getters
-    protected String get_resultado(){
+    public String get_valor(){
         return valor;
     }
     
     //setters
-    protected void set_resultado(String campo_texto){
-        this.valor = campo_texto;
+    //este é o próprio memory_mais
+    public void set_valor(String valor){
+        this.valor = valor;
     }
     
     //others
-    protected void memory_mais(){       
-        
+    public void memory_mais(String campo_texto){
+        String new_valor;
+        new_valor = String.valueOf( (Double.parseDouble(valor) + Double.parseDouble(campo_texto)) );
+        valor = new_valor;
     }
     
-    protected void memory_menos(){
-        
+    public void memory_menos(String campo_texto){
+        String new_valor;
+        new_valor = String.valueOf( (Double.parseDouble(valor) - Double.parseDouble(campo_texto)) );
+        valor = new_valor;
     }
     
 }

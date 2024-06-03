@@ -9,18 +9,16 @@ import CONTROL.Calculadora;
 public class Frame_Calculadora extends javax.swing.JFrame {
 
     //Instância de Memory
-    Memory my = new Memory();
+    Memory mm = new Memory();
     
     //Instância de Calculadora
     Calculadora cal = new Calculadora();
     
     public Frame_Calculadora() {
         //COMPONENTES DO FRAME
-        initComponents();
-                
+        initComponents();             
     }
     
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -33,7 +31,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         Painel_Body = new javax.swing.JPanel();
         Painel_BotoesMemory = new javax.swing.JPanel();
-        Botao_History = new javax.swing.JButton();
+        Botao_MemoryResultado = new javax.swing.JButton();
         Botao_MemoryMais = new javax.swing.JButton();
         Botao_MemoryMenos = new javax.swing.JButton();
         Painel_BotoesCorpo = new javax.swing.JPanel();
@@ -76,14 +74,14 @@ public class Frame_Calculadora extends javax.swing.JFrame {
 
         Painel_BotoesMemory.setOpaque(false);
 
-        Botao_History.setBackground(new java.awt.Color(15, 15, 15));
-        Botao_History.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        Botao_History.setForeground(new java.awt.Color(200, 200, 200));
-        Botao_History.setText("M");
-        Botao_History.setPreferredSize(new java.awt.Dimension(85, 30));
-        Botao_History.addActionListener(new java.awt.event.ActionListener() {
+        Botao_MemoryResultado.setBackground(new java.awt.Color(15, 15, 15));
+        Botao_MemoryResultado.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Botao_MemoryResultado.setForeground(new java.awt.Color(200, 200, 200));
+        Botao_MemoryResultado.setText("MR");
+        Botao_MemoryResultado.setPreferredSize(new java.awt.Dimension(85, 30));
+        Botao_MemoryResultado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Botao_HistoryActionPerformed(evt);
+                Botao_MemoryResultadoActionPerformed(evt);
             }
         });
 
@@ -115,7 +113,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
             Painel_BotoesMemoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Painel_BotoesMemoryLayout.createSequentialGroup()
                 .addGap(12, 12, 12)
-                .addComponent(Botao_History, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Botao_MemoryResultado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(Botao_MemoryMais, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
@@ -127,7 +125,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Painel_BotoesMemoryLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(Painel_BotoesMemoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Botao_History, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Botao_MemoryResultado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Botao_MemoryMais, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Botao_MemoryMenos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
@@ -453,7 +451,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         Botao_Apagar.setBackground(new java.awt.Color(15, 15, 15));
         Botao_Apagar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Botao_Apagar.setForeground(new java.awt.Color(200, 200, 200));
-        Botao_Apagar.setText("<");
+        Botao_Apagar.setText("DEL");
         Botao_Apagar.setPreferredSize(new java.awt.Dimension(100, 40));
         Botao_Apagar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -615,6 +613,8 @@ public class Frame_Calculadora extends javax.swing.JFrame {
     //EVENTO DOS BOTÕES CE E BOTÕES NUMÉRICOS
     private void Botao_CEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_CEActionPerformed
         Campo_TextoPrincipal.setText("");
+        Campo_TextoSecundario.setText("");
+        mm.set_valor("");
     }//GEN-LAST:event_Botao_CEActionPerformed
 
     private void Botao_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_0ActionPerformed
@@ -813,21 +813,48 @@ public class Frame_Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_Botao_PotenciaActionPerformed
 
     private void Botao_PercentualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_PercentualActionPerformed
-        // TODO add your handling code here:
+        if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
+            
+        }else{
+            Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "%"); 
+        }
     }//GEN-LAST:event_Botao_PercentualActionPerformed
 
     
     //EVENTOS BOTÕES DA FAIXA SUPERIOR (MEMORY)
-    private void Botao_HistoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_HistoryActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Botao_HistoryActionPerformed
+    private void Botao_MemoryResultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_MemoryResultadoActionPerformed
+        Campo_TextoSecundario.setText("");
+        Campo_TextoPrincipal.setText(mm.get_valor());
+    }//GEN-LAST:event_Botao_MemoryResultadoActionPerformed
 
     private void Botao_MemoryMaisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_MemoryMaisActionPerformed
-        // TODO add your handling code here:
+        //condição, se não há nada na memória ele faz o set
+        //caso haja, ele só adiciona
+        if(mm.get_valor().equals("")){
+            mm.set_valor(Campo_TextoPrincipal.getText());
+            Campo_TextoPrincipal.setText("");
+            Campo_TextoSecundario.setText(""); 
+        }else{
+            mm.memory_mais(Campo_TextoPrincipal.getText());
+            Campo_TextoPrincipal.setText("");
+            Campo_TextoSecundario.setText("");   
+        }
     }//GEN-LAST:event_Botao_MemoryMaisActionPerformed
 
     private void Botao_MemoryMenosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_MemoryMenosActionPerformed
-        // TODO add your handling code here:
+        //condição, se não há nada na memória ele faz o set
+        //caso haja, ele só subtrai
+        //note que diferente da soma, há um sinal de negativo no set, pois
+        //se não houvesse, a operação daria errada
+        if(mm.get_valor().equals("")){
+            mm.set_valor("-" + Campo_TextoPrincipal.getText());
+            Campo_TextoPrincipal.setText("");
+            Campo_TextoSecundario.setText(""); 
+        }else{
+            mm.memory_menos(Campo_TextoPrincipal.getText());
+            Campo_TextoPrincipal.setText("");
+            Campo_TextoSecundario.setText("");   
+        }  
     }//GEN-LAST:event_Botao_MemoryMenosActionPerformed
 
     
@@ -883,10 +910,10 @@ public class Frame_Calculadora extends javax.swing.JFrame {
     private javax.swing.JButton Botao_CE;
     private javax.swing.JButton Botao_Divisao;
     private javax.swing.JButton Botao_Fracao;
-    private javax.swing.JButton Botao_History;
     private javax.swing.JButton Botao_Igual;
     private javax.swing.JButton Botao_MemoryMais;
     private javax.swing.JButton Botao_MemoryMenos;
+    private javax.swing.JButton Botao_MemoryResultado;
     private javax.swing.JButton Botao_Multiplicacao;
     private javax.swing.JButton Botao_Percentual;
     private javax.swing.JButton Botao_Potencia;
