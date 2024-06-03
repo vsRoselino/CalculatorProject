@@ -12,8 +12,8 @@
 
 A proposta vem de um trabalho acadêmico, o primeiro projeto coletivo desenvolvido em Java, integrantes:
   +  <pre>👤vsRoselino</pre>    <pre>📧vsousa.roselino@outlook.com</pre>
-  +  <pre>👤...</pre>    <pre>📧...</pre>
-  +  <pre>👤...</pre>    <pre>📧...</pre>
+  +  <pre>👤Luckszzz</pre>    <pre>📧...</pre>
+  +  <pre>👤sarah</pre>    <pre>📧...</pre>
 
 <br>
 
