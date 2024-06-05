@@ -13,7 +13,6 @@ public class Memory {
     }
     
     //setters
-    //este é o próprio memory_mais
     public void set_valor(String valor){
         this.valor = valor;
     }

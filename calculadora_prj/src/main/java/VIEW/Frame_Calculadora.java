@@ -5,6 +5,7 @@
 package VIEW;
 import CONTROL.Memory;
 import CONTROL.Calculadora;
+import CONTROL.OperacoesEspecializadas;
 
 public class Frame_Calculadora extends javax.swing.JFrame {
 
@@ -14,9 +15,13 @@ public class Frame_Calculadora extends javax.swing.JFrame {
     //Instância de Calculadora
     Calculadora cal = new Calculadora();
     
+    //Instância de Operacoes Especializadas
+    OperacoesEspecializadas oe = new OperacoesEspecializadas();
+    
     public Frame_Calculadora() {
         //COMPONENTES DO FRAME
-        initComponents();             
+        initComponents(); 
+        
     }
     
     /**
@@ -596,7 +601,11 @@ public class Frame_Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_Botao_1ActionPerformed
 
     private void Botao_VirgulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_VirgulaActionPerformed
-        Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + ".");
+        if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
+            
+        }else{
+            Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "."); 
+        }
     }//GEN-LAST:event_Botao_VirgulaActionPerformed
 
     
@@ -738,12 +747,6 @@ public class Frame_Calculadora extends javax.swing.JFrame {
                 Campo_TextoSecundario.setText("");
                 
                 break;
-            case "|":
-                
-                break;
-            case "^":
-                
-                break;
         }
     }//GEN-LAST:event_Botao_IgualActionPerformed
 
@@ -758,13 +761,19 @@ public class Frame_Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_Botao_SomaActionPerformed
 
     private void Botao_SubtracaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_SubtracaoActionPerformed
-        cal.set_valor(Campo_TextoPrincipal.getText());
-        Campo_TextoPrincipal.setText("");
-        
-        operacao = "-";
-        
-        //VISOR SECUNDARIO
-        Campo_TextoSecundario.setText(cal.get_valor() + " " + operacao);
+        //a condição serve para, caso não haja nenhum valor no visor, e se 
+        //queira colocar um valor negativo, se adicione o sinal antes de um número
+        if(Campo_TextoPrincipal.getText().equals("")){
+            Campo_TextoPrincipal.setText("-");
+        }else{
+            cal.set_valor(Campo_TextoPrincipal.getText());
+            Campo_TextoPrincipal.setText("");
+
+            operacao = "-";
+
+            //VISOR SECUNDARIO
+            Campo_TextoSecundario.setText(cal.get_valor() + " " + operacao);
+        }
     }//GEN-LAST:event_Botao_SubtracaoActionPerformed
 
     private void Botao_MultiplicacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_MultiplicacaoActionPerformed
@@ -801,15 +810,39 @@ public class Frame_Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_Botao_ApagarActionPerformed
 
     private void Botao_FracaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_FracaoActionPerformed
-        // TODO add your handling code here:
+        String valor = Campo_TextoPrincipal.getText();
+        
+        oe.set_valor("1");
+        Campo_TextoPrincipal.setText(oe.fracao_menosUm(valor));
+        
+        operacao = "^-1";
+       
+        //VISOR SECUNDARIO
+        Campo_TextoSecundario.setText(valor + " " + operacao);
     }//GEN-LAST:event_Botao_FracaoActionPerformed
 
     private void Botao_RaizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_RaizActionPerformed
-        // TODO add your handling code here:
+        String valor = Campo_TextoPrincipal.getText();
+        
+        oe.set_valor(valor);
+        Campo_TextoPrincipal.setText(oe.raiz());
+        
+        operacao = "^1/2";
+       
+        //VISOR SECUNDARIO
+        Campo_TextoSecundario.setText(valor + " " + operacao);
     }//GEN-LAST:event_Botao_RaizActionPerformed
 
     private void Botao_PotenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_PotenciaActionPerformed
-        // TODO add your handling code here:
+        String valor = Campo_TextoPrincipal.getText();
+        
+        oe.set_valor(valor);
+        Campo_TextoPrincipal.setText(oe.potencia());
+        
+        operacao = "^2";
+       
+        //VISOR SECUNDARIO
+        Campo_TextoSecundario.setText(valor + " " + operacao);
     }//GEN-LAST:event_Botao_PotenciaActionPerformed
 
     private void Botao_PercentualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_PercentualActionPerformed
