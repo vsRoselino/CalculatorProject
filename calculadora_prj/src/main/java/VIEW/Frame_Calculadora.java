@@ -241,7 +241,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         Botao_Raiz.setBackground(new java.awt.Color(15, 15, 15));
         Botao_Raiz.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Botao_Raiz.setForeground(new java.awt.Color(200, 200, 200));
-        Botao_Raiz.setText("/x");
+        Botao_Raiz.setText("√x");
         Botao_Raiz.setPreferredSize(new java.awt.Dimension(65, 55));
         Botao_Raiz.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -252,7 +252,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         Botao_Potencia.setBackground(new java.awt.Color(15, 15, 15));
         Botao_Potencia.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Botao_Potencia.setForeground(new java.awt.Color(200, 200, 200));
-        Botao_Potencia.setText("^2");
+        Botao_Potencia.setText("x²");
         Botao_Potencia.setPreferredSize(new java.awt.Dimension(65, 55));
         Botao_Potencia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -590,11 +590,18 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    //o validador abaixo serve para condicionar o que vai aparecer no campo de
+    //texto principal, após realizar uma operação, ele apaga o campo
+    boolean validador_apagaCTP = false;
+    
     
     //EVENTO DOS BOTÕES 1 E BOTÃO VIRGULA  
     private void Botao_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_1ActionPerformed
         if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
             Campo_TextoPrincipal.setText("" + "1");
+        }else if(validador_apagaCTP == true){
+            Campo_TextoPrincipal.setText("1");
+            validador_apagaCTP = false;
         }else{
             Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "1");             
         }
@@ -629,6 +636,9 @@ public class Frame_Calculadora extends javax.swing.JFrame {
     private void Botao_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_0ActionPerformed
         if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
             Campo_TextoPrincipal.setText("" + "0");
+        }else if(validador_apagaCTP == true){
+            Campo_TextoPrincipal.setText("0");
+            validador_apagaCTP = false;
         }else{
             Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "0");             
         }
@@ -637,6 +647,9 @@ public class Frame_Calculadora extends javax.swing.JFrame {
     private void Botao_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_2ActionPerformed
         if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
             Campo_TextoPrincipal.setText("" + "2");
+        }else if(validador_apagaCTP == true){
+            Campo_TextoPrincipal.setText("2");
+            validador_apagaCTP = false;
         }else{
             Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "2");             
         }
@@ -645,6 +658,9 @@ public class Frame_Calculadora extends javax.swing.JFrame {
     private void Botao_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_3ActionPerformed
         if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
             Campo_TextoPrincipal.setText("" + "3");
+        }else if(validador_apagaCTP == true){
+            Campo_TextoPrincipal.setText("3");
+            validador_apagaCTP = false;
         }else{
             Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "3");             
         }
@@ -653,6 +669,9 @@ public class Frame_Calculadora extends javax.swing.JFrame {
     private void Botao_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_4ActionPerformed
         if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
             Campo_TextoPrincipal.setText("" + "4");
+        }else if(validador_apagaCTP == true){
+            Campo_TextoPrincipal.setText("4");
+            validador_apagaCTP = false;
         }else{
             Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "4");             
         }
@@ -661,6 +680,9 @@ public class Frame_Calculadora extends javax.swing.JFrame {
     private void Botao_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_5ActionPerformed
         if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
             Campo_TextoPrincipal.setText("" + "5");
+        }else if(validador_apagaCTP == true){
+            Campo_TextoPrincipal.setText("5");
+            validador_apagaCTP = false;
         }else{
             Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "5");             
         }
@@ -669,6 +691,9 @@ public class Frame_Calculadora extends javax.swing.JFrame {
     private void Botao_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_6ActionPerformed
         if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
             Campo_TextoPrincipal.setText("" + "6");
+        }else if(validador_apagaCTP == true){
+            Campo_TextoPrincipal.setText("6");
+            validador_apagaCTP = false;
         }else{
             Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "6");             
         }
@@ -677,6 +702,9 @@ public class Frame_Calculadora extends javax.swing.JFrame {
     private void Botao_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_7ActionPerformed
         if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
             Campo_TextoPrincipal.setText("" + "7");
+        }else if(validador_apagaCTP == true){
+            Campo_TextoPrincipal.setText("7");
+            validador_apagaCTP = false;
         }else{
             Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "7");             
         }
@@ -685,6 +713,9 @@ public class Frame_Calculadora extends javax.swing.JFrame {
     private void Botao_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_8ActionPerformed
         if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
             Campo_TextoPrincipal.setText("" + "8");
+        }else if(validador_apagaCTP == true){
+            Campo_TextoPrincipal.setText("8");
+            validador_apagaCTP = false;
         }else{
             Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "8");             
         }
@@ -693,6 +724,9 @@ public class Frame_Calculadora extends javax.swing.JFrame {
     private void Botao_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_9ActionPerformed
         if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
             Campo_TextoPrincipal.setText("" + "9");
+        }else if(validador_apagaCTP == true){
+            Campo_TextoPrincipal.setText("9");
+            validador_apagaCTP = false;
         }else{
             Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "9");             
         }
@@ -716,6 +750,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
                 //VISOR SECUNDARIO
                 Campo_TextoSecundario.setText("");
                 
+                validador_apagaCTP = true;
                 break;
             case "-":
                 String subtracao;
@@ -726,6 +761,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
                 //VISOR SECUNDARIO
                 Campo_TextoSecundario.setText("");
                 
+                validador_apagaCTP = true;
                 break;
             case "*":
                String multiplicacao;
@@ -736,6 +772,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
                 //VISOR SECUNDARIO
                 Campo_TextoSecundario.setText("");
                 
+                validador_apagaCTP = true;
                 break;
             case "/":
                 String divisao;
@@ -746,6 +783,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
                 //VISOR SECUNDARIO
                 Campo_TextoSecundario.setText("");
                 
+                validador_apagaCTP = true;
                 break;
         }
     }//GEN-LAST:event_Botao_IgualActionPerformed
