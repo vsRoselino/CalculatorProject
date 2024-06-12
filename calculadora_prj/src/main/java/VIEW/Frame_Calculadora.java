@@ -3,14 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package VIEW;
-import CONTROL.Memory;
 import CONTROL.Calculadora;
 import CONTROL.OperacoesEspecializadas;
 
 public class Frame_Calculadora extends javax.swing.JFrame {
-
-    //Instância de Memory
-    Memory mm = new Memory();
     
     //Instância de Calculadora
     Calculadora cal = new Calculadora();
@@ -68,19 +64,20 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         Campo_TextoSecundario = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(15, 15, 15));
-        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 232, 248)));
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 204, 102)));
         jPanel1.setPreferredSize(new java.awt.Dimension(350, 550));
         jPanel1.setRequestFocusEnabled(false);
 
-        Painel_Body.setBackground(new java.awt.Color(255, 203, 219));
+        Painel_Body.setBackground(new java.awt.Color(255, 204, 102));
         Painel_Body.setPreferredSize(new java.awt.Dimension(260, 300));
 
         Painel_BotoesMemory.setOpaque(false);
 
         Botao_MemoryResultado.setBackground(new java.awt.Color(15, 15, 15));
-        Botao_MemoryResultado.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Botao_MemoryResultado.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_MemoryResultado.setForeground(new java.awt.Color(200, 200, 200));
         Botao_MemoryResultado.setText("MR");
         Botao_MemoryResultado.setPreferredSize(new java.awt.Dimension(85, 30));
@@ -91,7 +88,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         });
 
         Botao_MemoryMais.setBackground(new java.awt.Color(15, 15, 15));
-        Botao_MemoryMais.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Botao_MemoryMais.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_MemoryMais.setForeground(new java.awt.Color(200, 200, 200));
         Botao_MemoryMais.setText("M+");
         Botao_MemoryMais.setPreferredSize(new java.awt.Dimension(85, 30));
@@ -102,7 +99,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         });
 
         Botao_MemoryMenos.setBackground(new java.awt.Color(15, 15, 15));
-        Botao_MemoryMenos.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Botao_MemoryMenos.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_MemoryMenos.setForeground(new java.awt.Color(200, 200, 200));
         Botao_MemoryMenos.setText("M-");
         Botao_MemoryMenos.setPreferredSize(new java.awt.Dimension(85, 30));
@@ -140,7 +137,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         Painel_BotoesCorpo.setOpaque(false);
 
         Botao_Percentual.setBackground(new java.awt.Color(15, 15, 15));
-        Botao_Percentual.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Botao_Percentual.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_Percentual.setForeground(new java.awt.Color(200, 200, 200));
         Botao_Percentual.setText("%");
         Botao_Percentual.setPreferredSize(new java.awt.Dimension(65, 55));
@@ -151,7 +148,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         });
 
         Botao_1.setBackground(new java.awt.Color(15, 15, 15));
-        Botao_1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Botao_1.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_1.setForeground(new java.awt.Color(200, 200, 200));
         Botao_1.setText("1");
         Botao_1.setPreferredSize(new java.awt.Dimension(65, 55));
@@ -162,7 +159,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         });
 
         Botao_4.setBackground(new java.awt.Color(15, 15, 15));
-        Botao_4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Botao_4.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_4.setForeground(new java.awt.Color(200, 200, 200));
         Botao_4.setText("4");
         Botao_4.setPreferredSize(new java.awt.Dimension(65, 55));
@@ -173,7 +170,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         });
 
         Botao_7.setBackground(new java.awt.Color(15, 15, 15));
-        Botao_7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Botao_7.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_7.setForeground(new java.awt.Color(200, 200, 200));
         Botao_7.setText("7");
         Botao_7.setPreferredSize(new java.awt.Dimension(65, 55));
@@ -184,7 +181,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         });
 
         Botao_Fracao.setBackground(new java.awt.Color(15, 15, 15));
-        Botao_Fracao.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Botao_Fracao.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_Fracao.setForeground(new java.awt.Color(200, 200, 200));
         Botao_Fracao.setText("1/x");
         Botao_Fracao.setPreferredSize(new java.awt.Dimension(65, 55));
@@ -195,7 +192,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         });
 
         Botao_0.setBackground(new java.awt.Color(15, 15, 15));
-        Botao_0.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Botao_0.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_0.setForeground(new java.awt.Color(200, 200, 200));
         Botao_0.setText("0");
         Botao_0.setPreferredSize(new java.awt.Dimension(65, 55));
@@ -206,7 +203,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         });
 
         Botao_2.setBackground(new java.awt.Color(15, 15, 15));
-        Botao_2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Botao_2.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_2.setForeground(new java.awt.Color(200, 200, 200));
         Botao_2.setText("2");
         Botao_2.setPreferredSize(new java.awt.Dimension(65, 55));
@@ -217,7 +214,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         });
 
         Botao_5.setBackground(new java.awt.Color(15, 15, 15));
-        Botao_5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Botao_5.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_5.setForeground(new java.awt.Color(200, 200, 200));
         Botao_5.setText("5");
         Botao_5.setPreferredSize(new java.awt.Dimension(65, 55));
@@ -228,7 +225,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         });
 
         Botao_8.setBackground(new java.awt.Color(15, 15, 15));
-        Botao_8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Botao_8.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_8.setForeground(new java.awt.Color(200, 200, 200));
         Botao_8.setText("8");
         Botao_8.setPreferredSize(new java.awt.Dimension(65, 55));
@@ -239,7 +236,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         });
 
         Botao_Raiz.setBackground(new java.awt.Color(15, 15, 15));
-        Botao_Raiz.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Botao_Raiz.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_Raiz.setForeground(new java.awt.Color(200, 200, 200));
         Botao_Raiz.setText("√x");
         Botao_Raiz.setPreferredSize(new java.awt.Dimension(65, 55));
@@ -250,7 +247,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         });
 
         Botao_Potencia.setBackground(new java.awt.Color(15, 15, 15));
-        Botao_Potencia.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Botao_Potencia.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_Potencia.setForeground(new java.awt.Color(200, 200, 200));
         Botao_Potencia.setText("x²");
         Botao_Potencia.setPreferredSize(new java.awt.Dimension(65, 55));
@@ -261,7 +258,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         });
 
         Botao_3.setBackground(new java.awt.Color(15, 15, 15));
-        Botao_3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Botao_3.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_3.setForeground(new java.awt.Color(200, 200, 200));
         Botao_3.setText("3");
         Botao_3.setPreferredSize(new java.awt.Dimension(65, 55));
@@ -272,7 +269,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         });
 
         Botao_6.setBackground(new java.awt.Color(15, 15, 15));
-        Botao_6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Botao_6.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_6.setForeground(new java.awt.Color(200, 200, 200));
         Botao_6.setText("6");
         Botao_6.setPreferredSize(new java.awt.Dimension(65, 55));
@@ -283,7 +280,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         });
 
         Botao_Virgula.setBackground(new java.awt.Color(15, 15, 15));
-        Botao_Virgula.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Botao_Virgula.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_Virgula.setForeground(new java.awt.Color(200, 200, 200));
         Botao_Virgula.setText(",");
         Botao_Virgula.setPreferredSize(new java.awt.Dimension(65, 55));
@@ -294,7 +291,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         });
 
         Botao_9.setBackground(new java.awt.Color(15, 15, 15));
-        Botao_9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Botao_9.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_9.setForeground(new java.awt.Color(200, 200, 200));
         Botao_9.setText("9");
         Botao_9.setPreferredSize(new java.awt.Dimension(65, 55));
@@ -305,7 +302,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         });
 
         Botao_Divisao.setBackground(new java.awt.Color(15, 15, 15));
-        Botao_Divisao.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Botao_Divisao.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_Divisao.setForeground(new java.awt.Color(200, 200, 200));
         Botao_Divisao.setText("/");
         Botao_Divisao.setPreferredSize(new java.awt.Dimension(65, 55));
@@ -316,7 +313,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         });
 
         Botao_Soma.setBackground(new java.awt.Color(15, 15, 15));
-        Botao_Soma.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Botao_Soma.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_Soma.setForeground(new java.awt.Color(200, 200, 200));
         Botao_Soma.setText("+");
         Botao_Soma.setPreferredSize(new java.awt.Dimension(65, 55));
@@ -327,7 +324,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         });
 
         Botao_Igual.setBackground(new java.awt.Color(15, 15, 15));
-        Botao_Igual.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Botao_Igual.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_Igual.setForeground(new java.awt.Color(200, 200, 200));
         Botao_Igual.setText("=");
         Botao_Igual.setPreferredSize(new java.awt.Dimension(65, 55));
@@ -338,7 +335,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         });
 
         Botao_Subtracao.setBackground(new java.awt.Color(15, 15, 15));
-        Botao_Subtracao.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Botao_Subtracao.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_Subtracao.setForeground(new java.awt.Color(200, 200, 200));
         Botao_Subtracao.setText("-");
         Botao_Subtracao.setPreferredSize(new java.awt.Dimension(65, 55));
@@ -349,7 +346,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         });
 
         Botao_Multiplicacao.setBackground(new java.awt.Color(15, 15, 15));
-        Botao_Multiplicacao.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Botao_Multiplicacao.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_Multiplicacao.setForeground(new java.awt.Color(200, 200, 200));
         Botao_Multiplicacao.setText("x");
         Botao_Multiplicacao.setPreferredSize(new java.awt.Dimension(65, 55));
@@ -443,7 +440,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         Painel_BotoesFaixaSuperior.setPreferredSize(new java.awt.Dimension(297, 42));
 
         Botao_CE.setBackground(new java.awt.Color(15, 15, 15));
-        Botao_CE.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Botao_CE.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_CE.setForeground(new java.awt.Color(200, 200, 200));
         Botao_CE.setText("CE");
         Botao_CE.setPreferredSize(new java.awt.Dimension(100, 40));
@@ -454,7 +451,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         });
 
         Botao_Apagar.setBackground(new java.awt.Color(15, 15, 15));
-        Botao_Apagar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Botao_Apagar.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_Apagar.setForeground(new java.awt.Color(200, 200, 200));
         Botao_Apagar.setText("DEL");
         Botao_Apagar.setPreferredSize(new java.awt.Dimension(100, 40));
@@ -507,16 +504,16 @@ public class Frame_Calculadora extends javax.swing.JFrame {
                 .addGap(42, 42, 42))
         );
 
-        Painel_Visor.setBackground(new java.awt.Color(255, 203, 219));
+        Painel_Visor.setBackground(new java.awt.Color(255, 204, 102));
         Painel_Visor.setPreferredSize(new java.awt.Dimension(360, 100));
 
         Campo_TextoPrincipal.setEditable(false);
         Campo_TextoPrincipal.setBackground(new java.awt.Color(15, 15, 15));
         Campo_TextoPrincipal.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        Campo_TextoPrincipal.setForeground(new java.awt.Color(255, 204, 102));
         Campo_TextoPrincipal.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Campo_TextoPrincipal.setCaretColor(new java.awt.Color(255, 255, 255));
         Campo_TextoPrincipal.setDisabledTextColor(new java.awt.Color(15, 15, 15));
-        Campo_TextoPrincipal.setEnabled(false);
         Campo_TextoPrincipal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Campo_TextoPrincipalActionPerformed(evt);
@@ -525,8 +522,8 @@ public class Frame_Calculadora extends javax.swing.JFrame {
 
         Campo_TextoSecundario.setBackground(new java.awt.Color(15, 15, 15));
         Campo_TextoSecundario.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Campo_TextoSecundario.setForeground(new java.awt.Color(255, 204, 102));
         Campo_TextoSecundario.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        Campo_TextoSecundario.setEnabled(false);
         Campo_TextoSecundario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Campo_TextoSecundarioActionPerformed(evt);
@@ -610,6 +607,8 @@ public class Frame_Calculadora extends javax.swing.JFrame {
     private void Botao_VirgulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_VirgulaActionPerformed
         if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
             
+        }else if(validador_apagaCTP == true){
+            
         }else{
             Campo_TextoPrincipal.setText(Campo_TextoPrincipal.getText() + "."); 
         }
@@ -630,7 +629,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
     private void Botao_CEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_CEActionPerformed
         Campo_TextoPrincipal.setText("");
         Campo_TextoSecundario.setText("");
-        mm.set_valor("");
+        cal.inicializa_historico("");
     }//GEN-LAST:event_Botao_CEActionPerformed
 
     private void Botao_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_0ActionPerformed
@@ -744,7 +743,8 @@ public class Frame_Calculadora extends javax.swing.JFrame {
             case "+":
                 String soma;
                 
-                soma = cal.soma(Campo_TextoPrincipal.getText());
+                cal.set_valor2(Campo_TextoPrincipal.getText());
+                soma = cal.soma();
                 Campo_TextoPrincipal.setText(soma);
                 
                 //VISOR SECUNDARIO
@@ -755,7 +755,8 @@ public class Frame_Calculadora extends javax.swing.JFrame {
             case "-":
                 String subtracao;
                 
-                subtracao = cal.subtracao(Campo_TextoPrincipal.getText());
+                cal.set_valor2(Campo_TextoPrincipal.getText());
+                subtracao = cal.subtracao();
                 Campo_TextoPrincipal.setText(subtracao);
 
                 //VISOR SECUNDARIO
@@ -766,7 +767,8 @@ public class Frame_Calculadora extends javax.swing.JFrame {
             case "*":
                String multiplicacao;
                 
-                multiplicacao = cal.multiplicacao(Campo_TextoPrincipal.getText());
+                cal.set_valor2(Campo_TextoPrincipal.getText());
+                multiplicacao = cal.multiplicacao();
                 Campo_TextoPrincipal.setText(multiplicacao);
                 
                 //VISOR SECUNDARIO
@@ -777,7 +779,8 @@ public class Frame_Calculadora extends javax.swing.JFrame {
             case "/":
                 String divisao;
                 
-                divisao = cal.divisao(Campo_TextoPrincipal.getText());
+                cal.set_valor2(Campo_TextoPrincipal.getText());
+                divisao = cal.divisao();
                 Campo_TextoPrincipal.setText(divisao);             
                 
                 //VISOR SECUNDARIO
@@ -789,13 +792,13 @@ public class Frame_Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_Botao_IgualActionPerformed
 
     private void Botao_SomaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_SomaActionPerformed
-        cal.set_valor(Campo_TextoPrincipal.getText());
+        cal.set_valor1(Campo_TextoPrincipal.getText());
         Campo_TextoPrincipal.setText("");
         
         operacao = "+";
         
         //VISOR SECUNDARIO
-        Campo_TextoSecundario.setText(cal.get_valor() + " " + operacao);
+        Campo_TextoSecundario.setText(cal.get_valor1() + " " + operacao);
     }//GEN-LAST:event_Botao_SomaActionPerformed
 
     private void Botao_SubtracaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_SubtracaoActionPerformed
@@ -804,54 +807,77 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         if(Campo_TextoPrincipal.getText().equals("")){
             Campo_TextoPrincipal.setText("-");
         }else{
-            cal.set_valor(Campo_TextoPrincipal.getText());
+            cal.set_valor1(Campo_TextoPrincipal.getText());
             Campo_TextoPrincipal.setText("");
 
             operacao = "-";
 
             //VISOR SECUNDARIO
-            Campo_TextoSecundario.setText(cal.get_valor() + " " + operacao);
+            Campo_TextoSecundario.setText(cal.get_valor1() + " " + operacao);
         }
     }//GEN-LAST:event_Botao_SubtracaoActionPerformed
 
     private void Botao_MultiplicacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_MultiplicacaoActionPerformed
-        cal.set_valor(Campo_TextoPrincipal.getText());
+        cal.set_valor1(Campo_TextoPrincipal.getText());
         Campo_TextoPrincipal.setText("");
         
         operacao = "*";
         
         //VISOR SECUNDARIO
-        Campo_TextoSecundario.setText(cal.get_valor() + " " + operacao);
+        Campo_TextoSecundario.setText(cal.get_valor1() + " " + operacao);
     }//GEN-LAST:event_Botao_MultiplicacaoActionPerformed
 
     private void Botao_DivisaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_DivisaoActionPerformed
-        cal.set_valor(Campo_TextoPrincipal.getText());
+        cal.set_valor1(Campo_TextoPrincipal.getText());
         Campo_TextoPrincipal.setText("");
         
         operacao = "/";
         
         //VISOR SECUNDARIO
-        Campo_TextoSecundario.setText(cal.get_valor() + " " + operacao);
+        Campo_TextoSecundario.setText(cal.get_valor1() + " " + operacao);
     }//GEN-LAST:event_Botao_DivisaoActionPerformed
 
     
     //EVENTOS DOS BOTÕES DE OPERAÇÕES ESPECIALIZADAS, BOTÃO APAGAR E PERCENTUAL
     private void Botao_ApagarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_ApagarActionPerformed
+        int caracteres_CampoTexto = Campo_TextoPrincipal.getText().length();
+        
         if(Campo_TextoPrincipal.getText().equals("Syntax Error")){
             
+        }else if(validador_apagaCTP == true){
+            //somente caso, tenha usado o botão igual
+            
+            //caso haja ponto (vírgula) no texto
+            if(Campo_TextoPrincipal.getText().contains(".")){
+                String texto_validador = Campo_TextoPrincipal.getText().substring(0, caracteres_CampoTexto - 1);
+                //o texto_validador é uma substring do texto principal, tendo um
+                //tamanho menor por uma unidade, assim se o último valor dessa 
+                //string for a vírgula, sabemos que da string pai, deve se, ao apagar,
+                //remover duas unidades do tamanho, assim não é necessário apagar
+                //a vírgula manualmente
+                if(texto_validador.endsWith(".")){
+                    String novo_texto = Campo_TextoPrincipal.getText().substring(0, caracteres_CampoTexto - 2);
+                    Campo_TextoPrincipal.setText(novo_texto);
+                    validador_apagaCTP = false; //retorna false, para nao cair 
+                    //neste if novamente
+                }else{
+                    String novo_texto = Campo_TextoPrincipal.getText().substring(0, caracteres_CampoTexto - 1);
+                    Campo_TextoPrincipal.setText(novo_texto);
+                }
+            }
         }else{
-            int quantidade_caracteres = Campo_TextoPrincipal.getText().length();
-            String novo_texto = Campo_TextoPrincipal.getText().substring(0, quantidade_caracteres - 1);
-
+            String novo_texto = Campo_TextoPrincipal.getText().substring(0, caracteres_CampoTexto - 1);
             Campo_TextoPrincipal.setText(novo_texto);         
         }
     }//GEN-LAST:event_Botao_ApagarActionPerformed
 
     private void Botao_FracaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_FracaoActionPerformed
+        //valor, isto é, o número que o usuário entra
+        //a mesma esta local nos seguintes métodos apenas para intuição
         String valor = Campo_TextoPrincipal.getText();
         
-        oe.set_valor("1");
-        Campo_TextoPrincipal.setText(oe.fracao_menosUm(valor));
+        oe.set_valor2(valor);
+        Campo_TextoPrincipal.setText(oe.fracao_menosUm());
         
         operacao = "^-1";
        
@@ -862,7 +888,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
     private void Botao_RaizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_RaizActionPerformed
         String valor = Campo_TextoPrincipal.getText();
         
-        oe.set_valor(valor);
+        oe.set_valor1(valor);
         Campo_TextoPrincipal.setText(oe.raiz());
         
         operacao = "^1/2";
@@ -874,7 +900,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
     private void Botao_PotenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_PotenciaActionPerformed
         String valor = Campo_TextoPrincipal.getText();
         
-        oe.set_valor(valor);
+        oe.set_valor1(valor);
         Campo_TextoPrincipal.setText(oe.potencia());
         
         operacao = "^2";
@@ -895,18 +921,19 @@ public class Frame_Calculadora extends javax.swing.JFrame {
     //EVENTOS BOTÕES DA FAIXA SUPERIOR (MEMORY)
     private void Botao_MemoryResultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_MemoryResultadoActionPerformed
         Campo_TextoSecundario.setText("");
-        Campo_TextoPrincipal.setText(mm.get_valor());
+        Campo_TextoPrincipal.setText(cal.acessa_historico());
+        //Campo_TextoPrincipal.setText(mm.get_valor());
     }//GEN-LAST:event_Botao_MemoryResultadoActionPerformed
 
     private void Botao_MemoryMaisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_MemoryMaisActionPerformed
         //condição, se não há nada na memória ele faz o set
         //caso haja, ele só adiciona
-        if(mm.get_valor().equals("")){
-            mm.set_valor(Campo_TextoPrincipal.getText());
+        if(cal.acessa_historico().equals("")){
+            cal.inicializa_historico(Campo_TextoPrincipal.getText());
             Campo_TextoPrincipal.setText("");
             Campo_TextoSecundario.setText(""); 
         }else{
-            mm.memory_mais(Campo_TextoPrincipal.getText());
+            cal.adiciona_memoriaPositivo(Campo_TextoPrincipal.getText());
             Campo_TextoPrincipal.setText("");
             Campo_TextoSecundario.setText("");   
         }
@@ -916,13 +943,13 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         //condição, se não há nada na memória ele faz o set
         //caso haja, ele só subtrai
         //note que diferente da soma, há um sinal de negativo no set, pois
-        //se não houvesse, a operação daria errada
-        if(mm.get_valor().equals("")){
-            mm.set_valor("-" + Campo_TextoPrincipal.getText());
+        //se não houvesse, a operação teria um resultado incorreto
+        if(cal.acessa_historico().equals("")){
+            cal.inicializa_historico("-" + Campo_TextoPrincipal.getText());
             Campo_TextoPrincipal.setText("");
             Campo_TextoSecundario.setText(""); 
         }else{
-            mm.memory_menos(Campo_TextoPrincipal.getText());
+            cal.adiciona_memoriaNegativo(Campo_TextoPrincipal.getText());
             Campo_TextoPrincipal.setText("");
             Campo_TextoSecundario.setText("");   
         }  
