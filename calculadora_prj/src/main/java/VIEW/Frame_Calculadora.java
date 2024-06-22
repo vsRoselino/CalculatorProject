@@ -76,10 +76,11 @@ public class Frame_Calculadora extends javax.swing.JFrame {
 
         Painel_BotoesMemory.setOpaque(false);
 
-        Botao_MemoryResultado.setBackground(new java.awt.Color(15, 15, 15));
+        Botao_MemoryResultado.setBackground(new java.awt.Color(0, 0, 0));
         Botao_MemoryResultado.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_MemoryResultado.setForeground(new java.awt.Color(200, 200, 200));
         Botao_MemoryResultado.setText("MR");
+        Botao_MemoryResultado.setFocusPainted(false);
         Botao_MemoryResultado.setPreferredSize(new java.awt.Dimension(85, 30));
         Botao_MemoryResultado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,10 +88,11 @@ public class Frame_Calculadora extends javax.swing.JFrame {
             }
         });
 
-        Botao_MemoryMais.setBackground(new java.awt.Color(15, 15, 15));
+        Botao_MemoryMais.setBackground(new java.awt.Color(0, 0, 0));
         Botao_MemoryMais.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_MemoryMais.setForeground(new java.awt.Color(200, 200, 200));
         Botao_MemoryMais.setText("M+");
+        Botao_MemoryMais.setFocusPainted(false);
         Botao_MemoryMais.setPreferredSize(new java.awt.Dimension(85, 30));
         Botao_MemoryMais.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,10 +100,11 @@ public class Frame_Calculadora extends javax.swing.JFrame {
             }
         });
 
-        Botao_MemoryMenos.setBackground(new java.awt.Color(15, 15, 15));
+        Botao_MemoryMenos.setBackground(new java.awt.Color(0, 0, 0));
         Botao_MemoryMenos.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_MemoryMenos.setForeground(new java.awt.Color(200, 200, 200));
         Botao_MemoryMenos.setText("M-");
+        Botao_MemoryMenos.setFocusPainted(false);
         Botao_MemoryMenos.setPreferredSize(new java.awt.Dimension(85, 30));
         Botao_MemoryMenos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -140,6 +143,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         Botao_Percentual.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_Percentual.setForeground(new java.awt.Color(200, 200, 200));
         Botao_Percentual.setText("%");
+        Botao_Percentual.setFocusPainted(false);
         Botao_Percentual.setPreferredSize(new java.awt.Dimension(65, 55));
         Botao_Percentual.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -151,6 +155,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         Botao_1.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_1.setForeground(new java.awt.Color(200, 200, 200));
         Botao_1.setText("1");
+        Botao_1.setFocusPainted(false);
         Botao_1.setPreferredSize(new java.awt.Dimension(65, 55));
         Botao_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -162,6 +167,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         Botao_4.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_4.setForeground(new java.awt.Color(200, 200, 200));
         Botao_4.setText("4");
+        Botao_4.setFocusPainted(false);
         Botao_4.setPreferredSize(new java.awt.Dimension(65, 55));
         Botao_4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -173,6 +179,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         Botao_7.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_7.setForeground(new java.awt.Color(200, 200, 200));
         Botao_7.setText("7");
+        Botao_7.setFocusPainted(false);
         Botao_7.setPreferredSize(new java.awt.Dimension(65, 55));
         Botao_7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -184,6 +191,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         Botao_Fracao.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_Fracao.setForeground(new java.awt.Color(200, 200, 200));
         Botao_Fracao.setText("1/x");
+        Botao_Fracao.setFocusPainted(false);
         Botao_Fracao.setPreferredSize(new java.awt.Dimension(65, 55));
         Botao_Fracao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -195,6 +203,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         Botao_0.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_0.setForeground(new java.awt.Color(200, 200, 200));
         Botao_0.setText("0");
+        Botao_0.setFocusPainted(false);
         Botao_0.setPreferredSize(new java.awt.Dimension(65, 55));
         Botao_0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -206,6 +215,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         Botao_2.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_2.setForeground(new java.awt.Color(200, 200, 200));
         Botao_2.setText("2");
+        Botao_2.setFocusPainted(false);
         Botao_2.setPreferredSize(new java.awt.Dimension(65, 55));
         Botao_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -217,6 +227,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         Botao_5.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_5.setForeground(new java.awt.Color(200, 200, 200));
         Botao_5.setText("5");
+        Botao_5.setFocusPainted(false);
         Botao_5.setPreferredSize(new java.awt.Dimension(65, 55));
         Botao_5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -228,6 +239,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         Botao_8.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_8.setForeground(new java.awt.Color(200, 200, 200));
         Botao_8.setText("8");
+        Botao_8.setFocusPainted(false);
         Botao_8.setPreferredSize(new java.awt.Dimension(65, 55));
         Botao_8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -239,6 +251,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         Botao_Raiz.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_Raiz.setForeground(new java.awt.Color(200, 200, 200));
         Botao_Raiz.setText("√x");
+        Botao_Raiz.setFocusPainted(false);
         Botao_Raiz.setPreferredSize(new java.awt.Dimension(65, 55));
         Botao_Raiz.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -250,6 +263,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         Botao_Potencia.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_Potencia.setForeground(new java.awt.Color(200, 200, 200));
         Botao_Potencia.setText("x²");
+        Botao_Potencia.setFocusPainted(false);
         Botao_Potencia.setPreferredSize(new java.awt.Dimension(65, 55));
         Botao_Potencia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -261,6 +275,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         Botao_3.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_3.setForeground(new java.awt.Color(200, 200, 200));
         Botao_3.setText("3");
+        Botao_3.setFocusPainted(false);
         Botao_3.setPreferredSize(new java.awt.Dimension(65, 55));
         Botao_3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -272,6 +287,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         Botao_6.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_6.setForeground(new java.awt.Color(200, 200, 200));
         Botao_6.setText("6");
+        Botao_6.setFocusPainted(false);
         Botao_6.setPreferredSize(new java.awt.Dimension(65, 55));
         Botao_6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -283,6 +299,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         Botao_Virgula.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_Virgula.setForeground(new java.awt.Color(200, 200, 200));
         Botao_Virgula.setText(",");
+        Botao_Virgula.setFocusPainted(false);
         Botao_Virgula.setPreferredSize(new java.awt.Dimension(65, 55));
         Botao_Virgula.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -294,6 +311,7 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         Botao_9.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_9.setForeground(new java.awt.Color(200, 200, 200));
         Botao_9.setText("9");
+        Botao_9.setFocusPainted(false);
         Botao_9.setPreferredSize(new java.awt.Dimension(65, 55));
         Botao_9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -301,10 +319,11 @@ public class Frame_Calculadora extends javax.swing.JFrame {
             }
         });
 
-        Botao_Divisao.setBackground(new java.awt.Color(15, 15, 15));
+        Botao_Divisao.setBackground(new java.awt.Color(0, 0, 0));
         Botao_Divisao.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_Divisao.setForeground(new java.awt.Color(200, 200, 200));
         Botao_Divisao.setText("/");
+        Botao_Divisao.setFocusPainted(false);
         Botao_Divisao.setPreferredSize(new java.awt.Dimension(65, 55));
         Botao_Divisao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -312,10 +331,11 @@ public class Frame_Calculadora extends javax.swing.JFrame {
             }
         });
 
-        Botao_Soma.setBackground(new java.awt.Color(15, 15, 15));
+        Botao_Soma.setBackground(new java.awt.Color(0, 0, 0));
         Botao_Soma.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_Soma.setForeground(new java.awt.Color(200, 200, 200));
         Botao_Soma.setText("+");
+        Botao_Soma.setFocusPainted(false);
         Botao_Soma.setPreferredSize(new java.awt.Dimension(65, 55));
         Botao_Soma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -323,10 +343,11 @@ public class Frame_Calculadora extends javax.swing.JFrame {
             }
         });
 
-        Botao_Igual.setBackground(new java.awt.Color(15, 15, 15));
+        Botao_Igual.setBackground(new java.awt.Color(139, 0, 0));
         Botao_Igual.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_Igual.setForeground(new java.awt.Color(200, 200, 200));
         Botao_Igual.setText("=");
+        Botao_Igual.setFocusPainted(false);
         Botao_Igual.setPreferredSize(new java.awt.Dimension(65, 55));
         Botao_Igual.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -334,10 +355,11 @@ public class Frame_Calculadora extends javax.swing.JFrame {
             }
         });
 
-        Botao_Subtracao.setBackground(new java.awt.Color(15, 15, 15));
+        Botao_Subtracao.setBackground(new java.awt.Color(0, 0, 0));
         Botao_Subtracao.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_Subtracao.setForeground(new java.awt.Color(200, 200, 200));
         Botao_Subtracao.setText("-");
+        Botao_Subtracao.setFocusPainted(false);
         Botao_Subtracao.setPreferredSize(new java.awt.Dimension(65, 55));
         Botao_Subtracao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -345,10 +367,11 @@ public class Frame_Calculadora extends javax.swing.JFrame {
             }
         });
 
-        Botao_Multiplicacao.setBackground(new java.awt.Color(15, 15, 15));
+        Botao_Multiplicacao.setBackground(new java.awt.Color(0, 0, 0));
         Botao_Multiplicacao.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_Multiplicacao.setForeground(new java.awt.Color(200, 200, 200));
         Botao_Multiplicacao.setText("x");
+        Botao_Multiplicacao.setFocusPainted(false);
         Botao_Multiplicacao.setPreferredSize(new java.awt.Dimension(65, 55));
         Botao_Multiplicacao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -439,10 +462,11 @@ public class Frame_Calculadora extends javax.swing.JFrame {
         Painel_BotoesFaixaSuperior.setOpaque(false);
         Painel_BotoesFaixaSuperior.setPreferredSize(new java.awt.Dimension(297, 42));
 
-        Botao_CE.setBackground(new java.awt.Color(15, 15, 15));
+        Botao_CE.setBackground(new java.awt.Color(0, 0, 0));
         Botao_CE.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_CE.setForeground(new java.awt.Color(200, 200, 200));
         Botao_CE.setText("CE");
+        Botao_CE.setFocusPainted(false);
         Botao_CE.setPreferredSize(new java.awt.Dimension(100, 40));
         Botao_CE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -450,10 +474,11 @@ public class Frame_Calculadora extends javax.swing.JFrame {
             }
         });
 
-        Botao_Apagar.setBackground(new java.awt.Color(15, 15, 15));
+        Botao_Apagar.setBackground(new java.awt.Color(0, 0, 0));
         Botao_Apagar.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         Botao_Apagar.setForeground(new java.awt.Color(200, 200, 200));
         Botao_Apagar.setText("DEL");
+        Botao_Apagar.setFocusPainted(false);
         Botao_Apagar.setPreferredSize(new java.awt.Dimension(100, 40));
         Botao_Apagar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -509,21 +534,24 @@ public class Frame_Calculadora extends javax.swing.JFrame {
 
         Campo_TextoPrincipal.setEditable(false);
         Campo_TextoPrincipal.setBackground(new java.awt.Color(15, 15, 15));
-        Campo_TextoPrincipal.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        Campo_TextoPrincipal.setFont(new java.awt.Font("Tahoma", 0, 28)); // NOI18N
         Campo_TextoPrincipal.setForeground(new java.awt.Color(255, 204, 102));
         Campo_TextoPrincipal.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Campo_TextoPrincipal.setCaretColor(new java.awt.Color(255, 255, 255));
         Campo_TextoPrincipal.setDisabledTextColor(new java.awt.Color(15, 15, 15));
+        Campo_TextoPrincipal.setFocusable(false);
         Campo_TextoPrincipal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Campo_TextoPrincipalActionPerformed(evt);
             }
         });
 
+        Campo_TextoSecundario.setEditable(false);
         Campo_TextoSecundario.setBackground(new java.awt.Color(15, 15, 15));
-        Campo_TextoSecundario.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Campo_TextoSecundario.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         Campo_TextoSecundario.setForeground(new java.awt.Color(255, 204, 102));
         Campo_TextoSecundario.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        Campo_TextoSecundario.setFocusable(false);
         Campo_TextoSecundario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Campo_TextoSecundarioActionPerformed(evt);
